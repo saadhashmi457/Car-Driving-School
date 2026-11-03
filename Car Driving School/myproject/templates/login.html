@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Driving School</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+    .form{
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form h1{
+        text-align: center;
+        margin-bottom: 20px;
+       color: #084b94;
+    }
+    .form p{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+   .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 96%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    
+   .form-group button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .form-group button:hover {
+        background-color: #0056b3;
+    }
+    
+    .form-group button{
+        margin-left: 260px;
+    }
+
+    .form-group button a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .form a {
+    text-decoration: none;
+    color: #040404;
+        }
+
+        .form button{
+            width:30%;
+            margin:auto;
+            background-color: #007bff;
+            cursor: pointer;
+        }
+.form button a
+        {
+            color:white;
+        }
+       
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href=" {% url "homepage" %} ">Shani Driving School</a></h1>
+            <nav>
+                <ul>
+                    <li><a href=" {% url "homepage" %} ">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href=" {% url "servicepage" %} ">Our Services</a></li>
+                    {% comment %} <li class="dropdown">
+                        <a href="#skills" class="dropbtn">Car Driving Skills</a>
+                        <div class="dropdown-content">
+                            <a href="#">Basic Driving</a>
+                            <a href="#">Advanced Techniques</a>
+                            <a href="#">Defensive Driving</a>
+                        </div>
+                    </li> {% endcomment %}
+                    <li><a href=" {% url "contactpage" %} ">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-search">
+                <div class="auth">
+                    <a href=" {% url "signuppage" %} " class="btn">Sign Up</a>
+                    <a href=" {% url "loginpage" %} " class="btn">Log In</a>
+                </div>
+            
+            </div>
+        </div>
+    </header>
+
+    
+<br> <br> <br> <br>
+
+
+ <div class="form">
+    <h1>Please Log In to your Account</h1>
+    <p>Log In</p>
+
+    <form action="{% url "loginpage" %}" method="post">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+        <input type="text" id="uNameid" name="username" placeholder="Enter Your username" required>
+        </div>
+
+
+        <div class="form-group">
+            <label for="Password">Password:</label>
+        <input type="password" name="password" id="passwordid" placeholder="Enter Your password" required>
+        </div>
+
+
+
+        <button><a href="{% url "signuppage" %}">Create an Account</a></button>
+        
+
+    
+
+        <div class="formfoot">
+            <p>Thank U for log In</p>
+        </div>
+
+
+            <button type="submit">Done</button>
+        
+
+    </form>
+</div>
+
+
+
+<br> <br> <br> <br>
+
+        <footer>
+        <div class="container">
+            <p>&copy; 2024 My Driving School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

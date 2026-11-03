@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+#home{
+    background-image: url("/static/images/car bc.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: scroll;
+    margin-bottom: 280px;
+    padding-top:112px;
+    padding-bottom:112px;
+    font-size: 22px;
+    opacity:0.9;
+}
+#home h1{
+    color: #fff;
+}
+#home p{
+    color: #fff;
+}
+
+.ab h2{
+color: #fffbfbff;
+background: #1f1919ff;
+font-size: 42px;
+}
+
+.ab p{
+    color: #1f1919ff;
+   
+}
+
+#about{
+ 
+    background: #020313f4;
+    
+}
+.ab{
+    border:2px solid black;
+    width:50%;
+    margin:auto;
+    background: #fff;
+    border-radius:12px;
+    padding:18px 32px;
+
+}
+
+#services{
+    border:2px solid black;
+     width:80%;
+    margin:auto;
+    background: #231414df;
+}
+
+#services h2{
+color: #fff;
+font-size:32px;
+}
+
+#contact{
+     border:2px solid black;
+     width:30%;
+    margin:auto;
+}
+
+.ct{
+    display:flex;
+    justify-content:space-between;
+}
+
+#contactdet{
+    
+    text-align:center;
+    margin:auto;
+}
+
+#contactdet h2,p{
+    
+
+}
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav {
+    float: left;
+    margin-top: 5px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #555;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.auth-search {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.smodal{
+    border:2px solid #0c1263f4;
+    width:60%;
+    margin:auto;
+
+}
+
+.lmodal{
+
+     border:2px solid #0c1263f4;
+    width:60%;
+    margin:auto;
+
+}
+
+
+
+.auth .btn {
+    margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+    background: #555;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.auth .btn:hover {
+    background: #777;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar button {
+    background: #555;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.search-bar button:hover {
+    background: #777;
+}
+
+/* Section Styles */
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service {
+    margin: 10px 0;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    border: 1px solid #888;
+    width: 80%;
+    margin:auto;
+   
+
+}
+
+#modal-signup{
+     border: 1px solid #888;
+    width: 80%;
+    margin:auto;
+
+}
+
+.modal-content {
+  
+    border: 1px solid #888;
+    width: 80%;
+    margin:auto;
+   
+}
+
+/* .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+

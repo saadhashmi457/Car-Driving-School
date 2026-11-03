@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Driving School</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href=" {% url "homepage" %} ">Shani Driving School</a></h1>
+            <nav>
+                <ul>
+                    <li><a href=" {% url "homepage" %} ">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href=" {% url "servicepage" %} ">Our Services</a></li>
+                    {% comment %} <li class="dropdown">
+                        <a href="#skills" class="dropbtn">Car Driving Skills</a>
+                        <div class="dropdown-content">
+                            <a href="#">Basic Driving</a>
+                            <a href="#">Advanced Techniques</a>
+                            <a href="#">Defensive Driving</a>
+                        </div>
+                    </li> {% endcomment %}
+                    <li><a href=" {% url "contactpage" %} ">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-search">
+                <div class="auth">
+                     <a href=" {% url "signuppage" %} " class="btn">Sign Up</a>
+                    <a href=" {% url "loginpage" %} " class="btn">Log In</a>
+                </div>
+            
+            </div>
+        </div>
+    </header>
+
+    <br>  <br>  <br>  <br>  
+
+
+  <div class="ct">
+<section id="contactdet">
+    <h2>We are happy to response you</h2>
+    <p>Thanks for your trust on us!</p>
+</section>
+
+      <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+           
+            <form id="contact-form" action="{% url "contactpage" %}" method="POST">
+             {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+  </div>
+
+  <br>  <br>  <br>  <br>  
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Driving School. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

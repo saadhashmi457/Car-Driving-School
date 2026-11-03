@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Driving School</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+
+        .search-bar label{
+            color:white;
+            margin-right:18px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href=" {% url "homepage" %} ">Shani Driving School</a></h1>
+            <nav>
+                <ul>
+                    <li><a href=" {% url "homepage" %} ">Home</a></li>
+                    <li><a href=" #about ">About</a></li>
+                    <li><a href=" {% url "servicepage" %} ">Our Services</a></li>
+                    {% comment %} <li class="dropdown">
+                        <a href="#skills" class="dropbtn">Car Driving Skills</a>
+                        <div class="dropdown-content">
+                            <a href="#">Basic Driving</a>
+                            <a href="#">Advanced Techniques</a>
+                            <a href="#">Defensive Driving</a>
+                        </div>
+                    </li> {% endcomment %}
+                    <li><a href=" {% url "contactpage" %} ">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-search">
+                <div class="auth">
+                    <a href=" {% url "signuppage" %} " class="btn">Sign Up</a>
+                    <a href=" {% url "loginpage" %} " class="btn">Log In</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  
+
+   
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+
+
+              <div class="search-bar">
+                <form method="get"> 
+                 {% comment %} <label for="searching">Search for service --| </label> {% endcomment %}
+                    <input type="text" name="search" placeholder="Search...">
+                    <button type="submit">Go</button>
+                </form>
+                </div>
+<br>
+            {% for i in servicesdata %}
+            <div class="service">
+                <h3>{{i.Title}}</h3>
+                <p>{{i.Detail}}</p>
+            </div>
+         {% endfor %}
+        </div>
+    </section>
+
+
+      <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  
+  
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Driving School. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

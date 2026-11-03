@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Driving School</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+
+        .auth{
+            margin-right:32px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href=" {% url "homepage" %} ">Shani Driving School</a></h1>
+            <nav>
+                <ul>
+                    <li><a href=" {% url "homepage" %} ">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href=" {% url "servicepage" %} ">Our Services</a></li>
+                    {% comment %} <li class="dropdown">
+                        <a href="#skills" class="dropbtn">Car Driving Skills</a>
+                        <div class="dropdown-content">
+                            <a href="#">Basic Driving</a>
+                            <a href="#">Advanced Techniques</a>
+                            <a href="#">Defensive Driving</a>
+                        </div>
+                    </li> {% endcomment %}
+                    <li><a href=" {% url "contactpage" %} ">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-search">
+                <div class="auth">
+                    <a href=" {% url "signuppage" %} " class="btn">Sign Up</a>
+                    <a href=" {% url "loginpage" %} " class="btn">Log In</a>
+                </div>
+
+                   <div class="search-bar">
+                <form method="get"> 
+                 {% comment %} <label for="searching">Search for service --| </label> {% endcomment %}
+                    <input type="text" name="searching" placeholder="Search...">
+                    <button type="submit">Go</button>
+                </form>
+                </div>
+              
+            </div>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h1> Welcome to My Driving School</h1>
+            <p>Learn to drive safely with the best instructors in town.</p>
+        </div>
+    </section>
+
+   
+
+    <section id="about">
+        <div class="container">
+          <div class="ab">
+              <h2>About Us</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi mollitia pariatur culpa nisi omnis maxime aliquid, quas dicta quod possimus ullam deleniti neque natus nulla magnam in id, debitis nemo consequatur odit! Ullam assumenda blanditiis vero debitis et officiis pariatur similique! Eligendi sint adipisci, maiores nam, illo dolorum quasi culpa similique doloribus officiis voluptatem magni necessitatibus iste, eaque ea id quis consequuntur qui reiciendis alias quaerat. Dignissimos aut ad minima repellat laudantium asperiores saepe numquam enim adipisci earum. Officiis mollitia iusto id saepe amet quam, tenetur doloremque qui neque eum enim inventore! Iure ipsum libero aliquam enim vero qui dignissimos sapiente voluptas expedita eius cum mollitia, blanditiis, esse fuga doloribus quia veritatis saepe dolores dicta, odio sint? Nihil, nisi, quod rem pariatur provident numquam possimus, veniam sed magni dolorum dolore molestiae dignissimos eius officia est quibusdam aut temporibus ipsa reprehenderit! Delectus non laudantium sit qui magni iste minus perferendis. Autem, maxime eveniet. Laboriosam odio voluptas iste, doloremque placeat esse, minima facere non ab perferendis porro unde ut eaque fugiat necessitatibus recusandae quos rerum sequi temporibus eos, nam aspernatur! Tenetur nam error quas accusamus labore perspiciatis sequi laboriosam iusto in et totam, aliquam, unde ratione esse possimus similique. !</p>
+          </div>
+        </div>
+    </section>
+
+
+    <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+   
+
+   
+  <div class="ct">
+<section id="contactdet">
+    <h2>We are happy to response you</h2>
+    <p>Thanks for your trust on us!</p>
+</section>
+
+      <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+           
+            <form id="contact-form" action="{% url "contactpage" %}" method="POST">
+             {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+  </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Driving School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" required>
+                
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+                
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Log In</h2>
+            <form>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
